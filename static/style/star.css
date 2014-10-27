@@ -1,0 +1,73 @@
+.star-header{width:1200px;height: 502px;margin:0 auto;border-bottom: 1px solid #d5d5d5;position: relative; background-color: white;}
+.star-banner{width:1200px;height: 383px;overflow: hidden;}
+.star-banner img{width: 100%;max-width: 100%;}
+.star-banner a{display: block;width:48px;height: 37px;position: absolute;top:0px;right:0px;z-index:9;background:url(../images/public/btnEditBanner.png) no-repeat 0 0;}
+.star-info{width: 1200px;height: 119px;position: relative;}
+
+.star-info-header{width:938px;height: 54px;padding-left:262px;line-height: 54px;}
+.star-info-header .h3{display: inline-block;height: 50px;padding-top:4px;line-height: 50px;margin-right:10px;}
+.star-info-header .star-history{margin-left: 20px;}
+
+.star-info .star-info-article{width:938px;height: 65px;padding-left: 262px;}
+.star-info .star-info-article li{width:180px;height: 65px;float: left;text-align: center;}
+.star-info .star-info-article li h5{font-weight: normal;color: black;}
+.star-info .star-info-article li.daren-score-icon{color:#ac7384;text-align: left;}
+
+
+.star-header-avatar{width: 160px;height: 232px;position: absolute;left:80px;top:-112px;}
+.star-header-avatar p{margin-top:7px;}
+.star-header-avatar p span{display: inline-block;width: 60px;margin-left:8px;text-align: center;}
+.star-header-avatar .separator{font-size: 20px;width:4px;height: 34px;border-left:1px solid #ddd;}
+
+.star-speaker{width:938px;height: 40px;position: absolute;left: 262px;top:-40px;}
+.star-speaker p{color: white;}
+
+
+
+/****/
+.star-home-subpage{width:1200px;height: auto;background-color: white;}
+.star-show{width:1200px;height: 340px;padding-top:26px;overflow: hidden;}
+.star-show ul{width:110%;}
+.star-show li{width:220px;height: 340px;float: left;display: inline-block;margin-right: 25px;text-align: center;line-height: 340px;}
+.star-show li img{width:100%;max-width: 100%;}
+
+.star-show li.star-show-btn{width:218px;height: 338px;border:1px solid #ddd;}
+.star-show li.star-show-btn a{display: block;width:100%;height: 100%;line-height: 340px;text-align: center;}
+
+.star-fans{width:1200px;height: auto;padding-top:24px;}
+.star-fans-header{width:1150px;height: 44px;border-bottom: 1px solid #dcdcdc;line-height: 44px;padding-left: 50px;}
+.star-fans-header h4{font-weight: normal;color:black;}
+.star-fans-toolbar{width:1100px;height: 38px;padding:0 50px;padding-top: 24px;}
+.star-fans-toolbar li{float: left;margin-right:30px;}
+.star-fans-toolbar li li{line-height: 18px;}
+
+
+.star-fans-article{width:1200px;height: auto;overflow: hidden;}
+.star-fans-article ul{width:110%;}
+.star-fans-article li{width: 220px;height: 444px;float: left;margin-right: 25px;margin-bottom:20px;}
+
+.star-fans-article li .picshow{width:220px;height: 340px;overflow: hidden;}
+.star-article li .picshow img{width: 100%;}
+.star-fans-article li .infoshow{width:210px;height: 94px;padding-top:10px;padding-left:10px;}
+.star-fans-article li .infoshow span{float: left;display: inline-block;margin-right:15px;}
+.star-fans-article li .infoshow span h5{font-weight: normal;margin-bottom:3px;}
+.star-fans-article li .infoshow span h5 a{color:black;}
+.star-fans-article li .infoshow span.flower{text-align: center;}
+
+
+
+.myhome-diary-pagebar{width: 100%; clear: both;text-align:center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

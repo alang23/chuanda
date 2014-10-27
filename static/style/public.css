@@ -1,0 +1,150 @@
+body{background-color: #f5f7fa;color: #666666;}
+.header{width:100%;height: 188px;background:white; }
+.header-top{width:1200px;height: 147px;margin:0 auto;position: relative;z-index:9;}
+.header-logo{width:237px;height:127px;float:left;padding:20px 0 0 8px;}
+.header-logo li{float:left;display: inline-block;margin-right:10px;}
+.header-logo li p{text-align: center;}
+.header-right{width: 955px;height: 147px;float:right;}
+.header-toolbar{width:945px;height:40px;text-align: right;line-height: 30px;position: relative;padding-right:10px;z-index:9;}
+.header-toolbar ul{position: absolute;right:0px;}
+.header-toolbar li{display: inline-block;margin:0 15px; _zoom:1;float: left;}
+.header-toolbar li .caret{line-height: 30px;}
+
+
+.header-search-box{width:865px;height:102px;padding:5px 0 0 90px;}
+.header-search-hot{width:855px;height: 47px;padding-left: 10px;}
+.header-search-hot li{float:left;width:37px;height: 37px;margin:0px 20px 0px 0px;display: inline-block;}
+.header-search-hot li img{width:37px;height: 37px;}
+.header-search-bar{width:500px;height: 32px;border:1px solid #dddddd;line-height:32px;border-radius: 5px;-webkit-border-radius:5px;-moz-border-radius:5px;}
+.header-search-bar span{width:106px;height:32px;float: left;text-align: center;display: inline-block;}
+.header-search-bar .header-search-input{width:333px;height: 31px;float:left;border:0px;line-height: 31px;padding: 0px 0px 0px 5px;margin:0px;color:#666666;display: inline-block;}
+.header-search-bar .header-search-submit{width:50px;height: 32px;float: right;background:url(../images/public/search_001.png) no-repeat 14px 6px;background-color: #ececec;border:0px;padding:0px;margin:0px;cursor: pointer;display: inline-block;}
+#header-people{position:absolute;top:-125px;right:0px;z-index:1;}
+
+.header-nav{width:100%;height: 40px;background:#882e84;position: relative;z-index:8;}
+.header-nav-box{width:1200px;height: 40px;margin: 0 auto; background: #882e84;position: relative;}
+.header-nav-box li{float: left;position: relative;width:121px;height: 40px;line-height: 40px; text-align: center;z-index:9;}
+.header-nav-box li.header-nav-home{width:102px;}
+.header-nav-box li span{position: absolute;left:0px;top:0px;color:#a1649f;}
+.header-nav-box li a{padding:4px 15px;-webkit-border-radius:20px;-moz-border-radius:20px;border-radius: 20px;}
+.header-nav-box li ul{display: none;width:600px;position: absolute;top:40px;left:24px;}
+.header-nav-box li ul li{float: left;width:100px;height: 30px;}
+.header-nav-box li ul li a{display: block;width: 100%;height: 100%;line-height: 30px; text-decoration: none;padding:0px;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius: 0px;}
+.header-nav-box li ul li a:link,.header-nav-box li ul li a:visited{background: #f2f2f2;color:#954891;}
+.header-nav-box li ul li a:hover{background:#882e84;color:#f2f2f2;text-decoration: none;}
+.nav-default:link,.nav-default:visited{color:white;background: #872f83;text-decoration: none;-moz-transition: all 0.2s linear;-webkit-transition: background 0.2s linear;-o-transition: background 0.2s linear;transition: background 0.2s linear;}
+.nav-current:link,.nav-current:hover,.nav-current:visited,.nav-default:hover,.nav-hover:link,.nav-hover:visited,.nav-hover:hover{color:#872f83;background: white;text-decoration: none;-moz-transition: background 0.2s linear;-webkit-transition: background 0.2s linear;-o-transition: background 0.2s linear;transition: background 0.2s linear;}
+
+.footer{width:1200px;height: auto;margin:0 auto;background-color: white;padding-bottom: 50px;margin-top:60px;}
+.footer-box{width: 1080px;height: auto;margin:0 auto; list-style: none;padding-top:80px;}
+.footer-box li{float: left;margin-right:18px;}
+.prelative{position: relative;}
+.footer-box li ul{list-style: none;}
+.footer-box li ul li{float:none;line-height: 24px;}
+.footer-about-list{position: relative;}
+#footer-logo{position: absolute;left:0px;top:-55px;}
+.footer-down-ios{width:122px;height:35px;display: block;background: url(../images/public/btn_down_app.jpg) no-repeat 0 0; text-indent: -9999px;margin-top:5px; }
+.footer-down-android{width:122px;height:35px;display: block;background: url(../images/public/btn_down_app.jpg) no-repeat 0 -39px;text-indent: -9999px;margin-top:5px; }
+.footer .copyright{width:1080px;margin:0 auto;padding-top:32px;line-height: 26px;color: #555555;}
+.placeholder { color: #aaa; }
+
+
+
+
+/*table**/
+
+
+/*   表格标题     */
+.infoTitle{ height:40px; margin:15px 0px; background:url(../images/public/tableTitle.png) repeat-x;position: relative;}
+.infoTitle span{ font-size:18px; font-weight:bold; color:#383838; background:#fff; margin-top:6px; padding-right:10px;}
+.infoTitle a{display: block;position: absolute;right:0px;top:0px;}
+/*   公共输入框     */
+.myInput{ border:1px solid #e3e4e8; height:41px; border-radius:5px; padding:0px 10px; float:left;}
+.myInputFocus{ border:1px solid #ff8f8f; }
+
+textarea{ width:90%; height:90px; border:2px solid #e3e4e8; border-radius:5px;}
+
+
+
+/*   一张横线输入框     */
+.onePxInput{  border:none; border-bottom:1px solid #9b9b9b; width:180px;}
+
+.normalInput{ width:258px; }/*   普通输入框     */
+.shortInput{ width:100px;}/*   验证码输入框（短的）     */
+.shortInput1{ width:40px;}/*   验证码输入框（短的）     */
+.shortInput2{ float:left; padding-left:5px; padding-right:5px;}/*   验证码输入框（短的）     */
+.longInput{ width:300px; }/*   长输入框     */
+
+
+.field-group{ padding: 4px 0px; font-size:16px; color:#3b3b3b; clear:both;}
+
+/*   左侧文字     */
+.field-group label{ width:100px;height: 42px; text-align:right; color:#7e7e7e; float:left; padding:10px 20px 0px 0px;}
+.field-group input[type="text"]{ color:#3b3b3b; font-size:18px; font-family:Tahoma,"微软雅黑"; }
+.field-group select{ 
+	width:290px;
+	height: 40px;
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+	line-height: 32px;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px 3px 3px 3px;
+	padding: 4px;
+	font-size: 16px;
+}
+.field-group textarea{ overflow:auto; border:1px solid #cecece; box-shadow: 2px 2px 3px #ebebeb inset;}
+.field-group .textRed{ color:red;}
+
+/*   普通控件样式可引用（如普通文字，单选框，复选框类）     */
+.field-group .normalText{ margin:10px 0px; float:left;}
+.field-group .normalCheckbox p{padding-right:10px; float:left; font-size:14px; line-height:25px;}
+
+
+/*   验证码或验证码提示文字     */
+.field-group .code{ margin-left:10px; float:left;}
+
+
+/*   最右侧提示文字    */
+.field-group .alertText{ float:left; border:1px solid #e3e3e3; border-radius: 4px; background:#f8f8f8; height:36px; line-height:36px; margin-left:10px; display:none; position:absolute;}
+.field-group .alertText em{ background:url(../images/public/alertText.png) 0px 2px;display: block; width:7px; height:32px; position:absolute;}
+.field-group .alertText span{ margin:0px 10px 0px 12px; color:#888; font-size:12px;}
+
+.field-group .alertTextFocus{ border:1px solid #ffb8b8; background:#fff2f2;}
+.field-group .alertTextFocus em{ background:url(../images/public/alertText.png) 0px -32px;}
+.field-group .alertTextFocus span{ color:#cc0000;}
+
+
+
+/*     订单管理  -   用户要求表      */
+.tableRequest{ width:580px; border-top:1px solid #dddddd; border-collapse:collapse; margin-top:10px;}
+.tableRequest td{ padding:2px 10px; border-bottom:1px solid #dddddd; height:42px;}
+.tableRequest .tdGray{ background:#f5f5f5; width:55px; text-align:center; color:#999;}
+
+
+
+/*     用户  -   用户搭配要求表      */
+.tablecollocationRequest{ width:730px; border-top:1px solid #dddddd; border-collapse:collapse; margin-top:10px;}
+.tablecollocationRequest td{ padding:2px 10px; border-bottom:1px solid #dddddd; height:42px;}
+.tablecollocationRequest .tdGray{ background:#f5f5f5; width:55px; text-align:center; color:#999;}
+
+
+
+.drop-box-nav{position: relative;padding:0px 10px;min-width: 60px;}
+.drop-box-nav a#nav-drop{display:block;width: 100%;height: 100%;text-align: left;}
+.drop-box-nav li{margin:0 0 5px 0;padding:0px 10px;text-align:left;display: block;float: none;}
+
+
+#msg-alert{width:600px;height: 200px;padding:30px;display: none;}
+
+#msg-alert .p1{line-height: 24px; text-align: center;}
+#msg-alert .p2{text-align: center;margin-top:20px;}
+
+
+
+/***皇冠*/
+.user-icon-crown{width:44px;height: 44px;display: block;background: url(../images/user/myhome-icon.png) 0 0 no-repeat; vertical-align:middle;}
+/***达人*/
+.user-icon-literate{width:44px;height: 44px;display:inline-block;background: url(../images/user/myhome-icon.png) 0 -52px no-repeat;vertical-align:middle;}
+
+
