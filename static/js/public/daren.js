@@ -242,7 +242,82 @@ var daren = {
 
 
 
-	}
+	},
+    'orderInit':function(jsHome){
+
+        $('.order-fast-btn').each(function(){
+
+            $(this).hover(function(){
+                $(this).siblings('.order-fast-view').show();
+            },function(){
+                $(this).siblings('.order-fast-view').hide();
+            });
+        });
+    },
+    'orderStep1_init':function(jsHome){
+        $('#myhome-chest-list li').each(function(){
+            var _this = $(this);
+            _this.hover(function(){
+                _this.find('.chest-list-info').stop(true,false).fadeIn('fast');
+            },function(){
+                 _this.find('.chest-list-info').stop(true,false).fadeOut('fast');
+            });
+
+            var _this_check = $(this).children('.combo-checkbox').find('input[type="checkbox"]');
+            $(this).children('.chest-list-info').children('a').click(function(){
+
+                var checked = _this_check.attr('checked');
+                if(checked=='checked'){
+                    _this_check.attr('checked',false);
+                    _this.find('.chest-icon').hide();             
+                    $(this).text('点击隐藏');
+
+                }else{
+                    _this_check.attr('checked',true);
+                    _this.find('.chest-icon').show();
+                    $(this).text('取消隐藏');
+                }
+            });
+        });
+    },
+    'orderStep2_init':function(jsHome){
+        var selectFirst = null;
+        $('#myhome-chest-list li').each(function(){
+            var _this = $(this);
+            _this.hover(function(){
+                _this.find('.chest-list-info').stop(true,false).fadeIn('fast');
+            },function(){
+                 _this.find('.chest-list-info').stop(true,false).fadeOut('fast');
+            });
+
+            var _this_check = $(this).children('.combo-checkbox').find('input[type="checkbox"]');
+            $(this).children('.chest-list-info').children('a').click(function(){
+
+                var checked = _this_check.attr('checked');
+                if(checked=='checked'){
+                    _this_check.attr('checked',false);
+                    _this.find('.chest-icon').hide();             
+                    $(this).text('点击优选');
+
+                }else{
+                    
+
+                    //删除其它选择
+                    clearAllSelected_step2();
+
+                    selectFirst = _this_check.val();
+                    _this_check.attr('checked',true);
+                    _this.find('.chest-icon').show();
+                    $(this).text('取消优选');
+
+
+                }
+                
+            });
+        });
+
+
+    }
 
 
 
@@ -250,3 +325,19 @@ var daren = {
 
 };
 
+
+
+function clearAllSelected_step2(){
+
+    $('#myhome-chest-list li').each(function(){
+        var _this = $(this);
+        var _ck = _this.find('input[type="checkbox"]');
+        if(_ck.attr('checked')=='checked'){
+            _ck.attr('checked',false);
+            _this.find('.chest-list-info').find('a').text('点击优选');
+            _this.find('.chest-icon').hide();
+        }
+    });
+
+
+}

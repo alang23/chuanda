@@ -74,10 +74,7 @@
 						<?php
 						}
 						?>
-<!--						<li><a href="<?=base_url()?>index.php?c=underwear&brand=2&userid=<?=$userid?>" class="chest-nav3 <?php if($brand == 2){ ?> active <?php } ?>">裤子 (60)</a></li>
-						<li><a href="<?=base_url()?>index.php?c=underwear&brand=3&userid=<?=$userid?>" class="chest-nav4 <?php if($brand == 3){ ?> active <?php } ?>">裙子 (60)</a></li>
-						<li><a href="<?=base_url()?>index.php?c=underwear&brand=4&userid=<?=$userid?>" class="chest-nav5 <?php if($brand == 4){ ?> active <?php } ?>">鞋子 (60)</a></li>
-						<li><a href="<?=base_url()?>index.php?c=underwear&brand=5&userid=<?=$userid?>" class="chest-nav6 <?php if($brand == 5){ ?> active <?php } ?>">单品 (60)</a></li>-->
+
 						<li><a href="<?=base_url()?>index.php?c=underwear&brand=0&userid=<?=$userid?>" class="chest-nav7 <?php if($brand == 99){ ?> active <?php } ?>">未分类 (60)</a></li>
 					</ul>
 

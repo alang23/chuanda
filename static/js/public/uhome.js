@@ -23,6 +23,7 @@ p.home_setting = function(jsHome){
         }
     }
     
+    
 
     $(".setting-list li").each(function(){
         var _this = $(this);
@@ -57,9 +58,11 @@ p.home_setting = function(jsHome){
         .script(jsHome+'lib/http.js?v=0.0.1')
         .script(jsHome+'plugin/register.js?v=0.0.1')
         .script(jsHome+'vender/layer/layer.min.js?v=1.8.5')
+        .script(jsHome+'vender/jquery.placeholder.js?v=2.0.8')
         .wait(function(){
             
-
+            $('input, textarea').placeholder();
+            
             var r = new UpdatePassword('form1');
             var r2 = new setPayPassword('form2');
 
@@ -190,16 +193,11 @@ p.home_my_chest = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '204800KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://chuanda.lg/index.php?c=underwear&m=add',
+                'uploader'      : 'http://localhost/uploadify.php',
                 'onUploadSuccess' :function(file, data, response){
-					var picdir = hostname+'uploads/member/clothespress/'+data;
-					
-                    $("#uploaded_list").find('#upid_'+upid).html('<img src="'+picdir+'" width="158px" />');
-					
+                    $("#uploaded_list").find('#upid_'+upid).html('<img src="'+data+'" width="158px" />');
                     upArr.push(data);
                     upid+=1;
-					
-					
                 },
                 'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {
                     var percent = Math.floor((bytesUploaded/bytesTotal)*100);
@@ -254,7 +252,6 @@ p.home_my_chest = function(jsHome){
                         $("#d-star").val(_data.data.star);
                         $("#d-prize_min").val(_data.data.prize_min);
                         $("#d-prize_max").val(_data.data.prize_max);
-						$("#apparelId").val(_id);
 
                         for(var i=0,len=_data.data.season.length;i<len;i++){
                             _wrap.find('input[name="season"]').each(function(){
@@ -275,8 +272,7 @@ p.home_my_chest = function(jsHome){
             $("#chest-detail-submit").click(function(){
                
                 $("#chest-detail-submit-tip").html('正在保存...');
-                var _id = $("#apparelId").val();
-				
+                var _id = $(this).attr('data-id');
                 var obj = {}
                 obj.d_type = $('#d-type').val();
                 obj.d_style = $('#d-style').val();
@@ -285,7 +281,6 @@ p.home_my_chest = function(jsHome){
                 obj.star = $('#star').val();
                 obj.prize_min = $('#prize_min').val();
                 obj.prize_max = $('#prize_max').val();
-	
 
 
                 setTimeout(function(){
@@ -332,14 +327,9 @@ p.home_my_chest = function(jsHome){
 
             $("#upload-submit-btn").click(function(){
                 $("#upload-submit-tip").html('正在保存...,请不要关闭窗口.');
-				
-				//addChestPic(upArr);
-				
                 setTimeout(function(){
                     var rs = addChestPic(upArr);
-					
-                    //if(rs && rs.code==0){
-						 if(rs==1){
+                    if(rs && rs.code==0){
                         $("#upload-submit-tip").html('<span class="tip-success">保存成功,2秒钟后窗口自动关闭</span>');
                         setTimeout(function(){
                             location.reload();
@@ -349,9 +339,6 @@ p.home_my_chest = function(jsHome){
                     }
 
                 },800);
-			
-				
-				
             });
         });
 
@@ -385,12 +372,10 @@ p.addDiary = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '204800KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://chuanda.lg/index.php?c=daily&m=add_pic',
+                'uploader'      : 'http://localhost/uploadify.php',
                 'onUploadSuccess' :function(file, data, response){
-					var picdir = hostname+'uploads/member/daily/'+data;
-					
                    $("#upload-show-btn").hide();
-                   $("#upload-show-pic").html('<img src="'+picdir+'" />');
+                   $("#upload-show-pic").html('<img src="'+data+'" />');
                    $("#upload_show_val").val(data);
                 },
                 'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {

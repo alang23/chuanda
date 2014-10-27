@@ -35,10 +35,12 @@
             <!--daren nav start-->
             <div class="order-step-list">
                 <ul>
+
                     <li class="order-step1 active">
                         <span class="order-step-icon">1</span>
                         <span class="h5">隐藏衣饰</span>
                     </li>
+
                     <li class="order-step2">
                         <span class="order-step-icon">2</span>
                         <span class="h5">优选衣饰 </span>
@@ -75,76 +77,39 @@
             
             <div class="order-step-article">
                 <div class="myhome-chest-nav">
-                    <ul>
-                        <li><a href="#" class="chest-nav1 active">全部 (60)</a></li>
-                        <li><a href="#" class="chest-nav2">上衣 (20)</a></li>
-                        <li><a href="#" class="chest-nav3">裤子 (60)</a></li>
-                        <li><a href="#" class="chest-nav4">裙子 (60)</a></li>
-                        <li><a href="#" class="chest-nav5">鞋子 (60)</a></li>
-                        <li><a href="#" class="chest-nav6">单品 (60)</a></li>
-                        <li><a href="#" class="chest-nav7">未分类 (60)</a></li>
-                    </ul>
+					<ul>
+
+						<li><a href="<?=base_url()?>index.php?c=myorder&brand=0&userid=<?=$userid?>" class="chest-nav1 <?php if($brand == 0){ ?> active <?php } ?>">全部 (60)</a></li>
+						<?php
+								foreach($types as $tk2 => $tv2){
+							?>
+						<li><a href="<?=base_url()?>index.php?c=myorder&brand=<?=$tv2['id']?>&userid=<?=$userid?>" class="chest-nav<?=$tk2+2?> <?php if($brand == $tv2['id']){ ?> active <?php } ?>"><?=$tv2['attribute']?> (20)</a></li>
+						<?php
+						}
+						?>
+
+						<li><a href="<?=base_url()?>index.php?c=myorder&brand=0&userid=<?=$userid?>" class="chest-nav7 <?php if($brand == 99){ ?> active <?php } ?>">未分类 (60)</a></li>
+					</ul>
                 </div>
 
 
                 <div class="myhome-chest-list" id="myhome-chest-list">
                     <ul>
-                        <li data-id="1">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
+					<?php
+						foreach($list as $k => $v){
+					?>
+                        <li data-id="<?=$v['apparelId']?>">
+                            <img src="<?=base_url()?>uploads/member/clothespress/<?=$v['imageUrl']?>" alt="">
                             <div class="chest-list-info">
                                 <a href="javascript:void(0);">点击隐藏</a>
                             </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="1" /></span> 
+                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="<?=$v['apparelId']?>" /></span> 
                             <div class="chest-icon chest-icon-yin"></div>
                         </li>
-                        <li data-id="2">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
-                            <div class="chest-list-info">
-                                <a href="javascript:void(0);">点击隐藏</a>  
-                            </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="2" /></span>
-                            <div class="chest-icon chest-icon-yin"></div>
-                        </li>
-                        <li data-id="3">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
-                            <div class="chest-list-info">
-                                <a href="javascript:void(0);">点击隐藏</a>     
-                            </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="3" /></span>
-                            <div class="chest-icon chest-icon-yin"></div>
-                        </li>
-                        <li data-id="4">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
-                            <div class="chest-list-info">
-                                <a href="javascript:void(0);">点击隐藏</a>
-                            </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="4" /></span>
-                            <div class="chest-icon chest-icon-yin"></div>
-                        </li>
-                        <li data-id="5">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
-                            <div class="chest-list-info">
-                                <a href="javascript:void(0);">点击隐藏</a>
-                            </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="5" /></span> 
-                            <div class="chest-icon chest-icon-yin"></div>
-                        </li>
-                        <li data-id="6">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
-                            <div class="chest-list-info">
-                                <a href="javascript:void(0);">点击隐藏</a>
-                            </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="6" /></span>  
-                            <div class="chest-icon chest-icon-yin"></div>
-                        </li>
-                        <li data-id="7">
-                            <img src="<?=base_url()?>static/images/t2.jpg" alt="">
-                            <div class="chest-list-info">
-                                <a href="javascript:void(0);">点击隐藏</a>
-                            </div>
-                            <span class="combo-checkbox"><input type="checkbox" name="chest_list" value="7" /></span>
-                            <div class="chest-icon chest-icon-yin"></div>
-                        </li>
+					<?php
+						}
+					?>
+
                     </ul>
                     <div class="clear"></div>
                 </div>
@@ -157,17 +122,7 @@
             <div class="myhome-diary-pagebar">
 
                 <ul class="pagination">
-                  <li><a href="#">上一页</a></li>
-                  <li><span  class="page-active">1</span></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  <li><a href="#">6</a></li>
-                  <li><a href="#">7</a></li>
-                  <li><a href="#">8</a></li>
-                  <li><span>...</span></li>
-                  <li><a href="#">下一页</a></li>
+ <?=$page?>
                 </ul> 
             </div>
 
