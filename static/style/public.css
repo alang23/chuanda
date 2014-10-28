@@ -148,3 +148,22 @@ textarea{ width:90%; height:90px; border:2px solid #e3e4e8; border-radius:5px;}
 .user-icon-literate{width:44px;height: 44px;display:inline-block;background: url(../images/user/myhome-icon.png) 0 -52px no-repeat;vertical-align:middle;}
 
 
+
+
+/**头像下面人名**/
+
+.avatar-box-default{padding:10px;text-align: center;width:80px;height: 80px;line-height: 28px;}
+
+
+
+.chest-icon-kou{width:40px;height: 40px;background: url(../images/icon.png) no-repeat 0 -162px;}
+.chest-icon-yin{width:40px;height: 40px;background: url(../images/icon.png) no-repeat 0 -212px;}
+.chest-icon-xiu{width:40px;height: 40px;background: url(../images/icon.png) no-repeat 0 -264px;}
+.chest-icon-you{width:40px;height: 40px;background: url(../images/icon.png) no-repeat -44px -162px;}
+
+.drop-box{width:70px;position: relative;padding-left:30px;z-index: 99;}
+.drop-box .dropdown-menu li{width:70px;padding-left:30px;margin:0 0 5px 0;}
+
+
+
+

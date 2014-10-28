@@ -335,6 +335,10 @@ a:hover{color:#882e84; text-decoration:underline;}
 
 .icon-star-focus{width: 11px;height: 11px;background: url(../images/icon.png) no-repeat -36px -115px;vertical-align: baseline;}
 .icon-star-focus.active{width: 11px;height: 11px;background: url(../images/icon.png) no-repeat -36px -128px;}
+.icon-right{width:35px;height: 35px;background:url(../images/icon.png) no-repeat -41px -310px;}
+.icon-info{width:20px;height: 20px;background:url(../images/icon.png) no-repeat -84px -319px;}
+
+
 
 
 /**dropdown-menu**/
@@ -426,6 +430,14 @@ a:hover{color:#882e84; text-decoration:underline;}
 .form-common .login-select{position: relative;width:282px;height: 26px;line-height: 30px;}
 .form-common .login-select .login-btn{position: absolute;top:20px;left: 0px;font-weight: bold;color: #882e84;font-size:18px;}
 .form-common .login-select .reg-btn{position: absolute;top:20px;right: 0px;}
+
+.form-common .textarea-default{
+	width: 410px;
+	height: 86px;
+	overflow: auto;
+	vertical-align: top;
+	padding: 5px;
+}
 
 .form-common select{
 	width: 290px;
@@ -550,6 +562,9 @@ a:hover{color:#882e84; text-decoration:underline;}
 .font-default{font-size:12px;}
 .font-large{font-size:16px;}
 .h3{font-size:20px;}
+.h4{font-size:18px;}
+.h5{font-size:16px;}
+.h6{font-size:14px;}
 
 
 

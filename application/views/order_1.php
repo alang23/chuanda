@@ -127,7 +127,7 @@
             </div>
 
             <div class="order-step-btn">
-                <a href="#" class="lg-btn lg-btn-primary lg-btn-large">下一步</a>
+                <a href="<?=base_url()?>index.php?c=myorder&m=step2&uid=<?=$uid?>" class="lg-btn lg-btn-primary lg-btn-large">下一步</a>
             </div>
             
             

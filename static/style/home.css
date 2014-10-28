@@ -6,8 +6,7 @@
 
 .myhome-toolbar{width: 1120px;height:40px;background-color:#f8f8f8;margin:0 auto;padding:20px 0 0 20px;}
 .myhome-toolbar li{float: left;position: relative;display: inline-block;margin-right: 20px;}
-.drop-box{width:70px;position: relative;padding-left:30px;z-index: 99;}
-.drop-box .dropdown-menu li{width:70px;padding-left:30px;margin:0 0 5px 0;}
+
 #page-show-select{width:36px;height: 30px;}
 
 .drop-box-pagenum{width:40px;position: relative;padding-left:10px;z-index:99;}
@@ -480,16 +479,14 @@
 
 .myhome-chest-list{width:972px;height: auto;float: right;}
 
-.myhome-chest-list li{width: 158px;height:202px;float: left;background: #f8f8f8;margin-right:16px;margin-bottom:16px;display: inline-block;position: relative;}
+.myhome-chest-list li{width: 158px;height:202px;float: left;background: #f8f8f8;margin-right:16px;margin-bottom:16px;display: inline-block;position: relative;overflow: hidden;}
 .myhome-chest-list li .combo-checkbox{display: none;}
 .myhome-chest-list li img{width: 100%;text-align: center;line-height: 202px;}
 .myhome-chest-list li .chest-list-info{width:158px;height: 172px;padding-top:30px;background: black; opacity: 0.7;filter:alpha(70);position: absolute;top:0px;left: 0px;display: none;z-index:10;}
 .myhome-chest-list li p{line-height: 20px;text-align: center;color: white;}
 .myhome-chest-list li .chest-icon{width:40px;height: 40px;position: absolute;bottom: 10px;right: 10px;z-index:9;}
 
-.chest-icon-kou{width:40px;height: 40px;background: url(../images/icon.png) no-repeat 0 -162px;}
-.chest-icon-yin{width:40px;height: 40px;background: url(../images/icon.png) no-repeat 0 -212px;}
-.chest-icon-xiu{width:40px;height: 40px;background: url(../images/icon.png) no-repeat 0 -264px;}
+
 
 
 .chest-upload-box{width:880px;height: 540px;display: none;}
@@ -685,7 +682,7 @@
 .comment-article .p3,.comment-article .p4{line-height: 20px;}
 .comment-order{position: absolute;top:80px;right:0px;}
 
-.comment-user{width:190px;height:188px;float: right;text-align: center;padding-top:20px;}
+.comment-user{width:170px;height:188px;float: right;text-align: center;padding-top:20px;border-left:1px solid #ddd;}
 .comment-user p{margin:6px 0;}
 
 
