@@ -6,11 +6,11 @@
  * Time: 下午2:05
  */
 
-class Member_mdl extends  CI_Model
+class Base_information_mdl extends  CI_Model
 {
 
 
-    const TABLE = 't_user_base_info';
+    const TABLE = 't_user_base_information';
 
 
     public function __construct()
@@ -92,10 +92,5 @@ class Member_mdl extends  CI_Model
         $count =  $this->db->count_all_results(self::TABLE);
 
         return $count;
-    }
-
-    public function get_insert_id()
-    {
-        return $this->db->insert_id();
     }
 }

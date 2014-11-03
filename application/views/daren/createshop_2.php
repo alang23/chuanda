@@ -70,7 +70,7 @@
 
                 </div>
             </div>
-            <p class="super-line align-center padding-top-default"><a href="#" class="lg-btn lg-btn-primary lg-btn-large">下一步</a></p>
+            <p class="super-line align-center padding-top-default"><a href="<?=base_url()?>index.php?c=createshop&m=step3" class="lg-btn lg-btn-primary lg-btn-large">下一步</a></p>
 
 
             </form>

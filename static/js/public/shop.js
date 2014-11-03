@@ -14,10 +14,13 @@ shop.daren_reg = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '2048KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://localhost/uploadify.php',
+                'uploader'      : 'http://chuanda.lg/index.php?c=createshop&m=uploadfile&type=idcard',
                 'onUploadSuccess' :function(file, data, response){
-                    $("#idcard-show").html('<img src="'+data+'" width="120" height="90" />');
-                	$("#idcard-show-input").val(data);
+
+					var returndata = eval('(' + data + ')');
+					$("#idcard-show").html('<img src="'+returndata.filedir+'" width="120" height="90" />');
+                	$("#idcard-show-input").val(returndata.filename);
+					
                 }
             });
 
@@ -27,10 +30,11 @@ shop.daren_reg = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '2048KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://localhost/uploadify.php',
+                'uploader'      : 'http://chuanda.lg/index.php?c=createshop&m=uploadfile&type=photo',
                 'onUploadSuccess' :function(file, data, response){
-                    $("#bust-show").html('<img src="'+data+'" width="120" height="90" />');
-                	$("#bust-show-input").val(data);
+					var returndata = eval('(' + data + ')');
+                    $("#bust-show").html('<img src="'+returndata.filedir+'" width="120" height="90" />');
+                	$("#bust-show-input").val(returndata.filename);
                 }
             });
 

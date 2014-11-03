@@ -39,7 +39,21 @@ class Reg extends Base_Controller
 			$info['mobile'] = $mobile;
 			$info['pass_word'] = md5($pawd);
 			
-			echo $this->member->add($info);
+			$this->member->add($info);
+			$id = $this->member->get_insert_id();
+
+			//用户其他信息表
+			$this->load->model('base_information_mdl','baseinfo');
+			$basedata['base_info_id'] = $id;
+			$this->baseinfo->add($basedata);
+
+			//穿搭用户属性表
+			$this->load->model('Coluserinfo_mdl','coluserinfo');
+			$coluserinfo['user_id'] = $id;
+			$this->coluserinfo->add($coluserinfo);
+
+			//用户权限表
+			
 
 		}else{
 			$this->load->view('reg');	

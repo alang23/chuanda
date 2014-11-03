@@ -78,7 +78,23 @@ function followOne(id,isFollow){
  * return JSON
  */
 function updatePwd(old_pwd,pwd,cpwd){
-
+	
+	var R;
+	
+	$.ajax({
+		url: hostname+"index.php?c=setting&m=changepwd&rand="+Math.random(),
+		
+		data: {old_password:old_pwd,password:pwd,c_password:cpwd},
+		type:"POST",
+		async:false,
+		success:function(r){
+			//alert(r);
+			
+		}
+	})
+	
+	
+	
 	return {"code":0,"msg":"ok"};
 }
 

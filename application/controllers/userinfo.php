@@ -120,6 +120,7 @@ class Userinfo extends Base_Controller
 			$memconfig = array('id'=>$userid);
 			$this->member->update($memconfig,$memdata);
 
+			redirect('c=userinfo');
 
 		}else{
 

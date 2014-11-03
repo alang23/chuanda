@@ -15,7 +15,7 @@
 					?>
 					<a href="<?=base_url()?>index.php?c=home"  class="userNavCur">我的穿搭日记</a> | 
 					<a href="<?=base_url()?>index.php?c=userinfo">我的资料</a> | 
-					<a href="../myAttention/myAttention.html">我的关注</a> | 
+					<a href="<?=base_url()?>index.php?c=follow">我的关注</a> | 
 					<a href="<?=base_url()?>index.php?c=underwear">我的衣柜</a>
 					<?php
 						}else{
@@ -23,8 +23,8 @@
 					?>
 					<a href="<?=base_url()?>index.php?c=home&userid=<?=$userid?>"  class="userNavCur">TA的穿搭日记</a> | 
 					<a href="<?=base_url()?>index.php?c=userinfo&userid=<?=$userid?>">TA的资料</a> | 
-					<a href="../myAttention/myAttention.html">TA的关注</a> | 
-					<a href="../myWardrobe/myWardrobe.html">TA的衣柜</a>
+					<a href="<?=base_url()?>index.php?c=follow">TA的关注</a> | 
+					<a href="<?=base_url()?>index.php?c=underwear">TA的衣柜</a>
 					<?php
 						}
 					?>

@@ -54,7 +54,9 @@ class Login extends Base_Controller
             $logininfo['id'] = $userinfo['userid'];
             $logininfo['username'] = $userinfo['username'];
             $logininfo['photo'] = $userinfo['photo'];
-            $logininfo['role'] = 1;
+            //取得用户角色
+            //$logininfo['role'] = 2;
+            
 
             
             //记录状态

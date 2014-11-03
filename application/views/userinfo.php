@@ -99,8 +99,8 @@
 			</div>	
 			<div class="field-group">
 				<label>新浪微博</label>
-								<?php
-					if($userbaseinfo['weixin_install']){
+				<?php
+					if($userbaseinfo['weixin_install'] || $checkuser['isown']){
 				?>
 				<span class="normalText"><?=$userbaseinfo['sina_weibo']?></span>
 				<?php
@@ -111,7 +111,7 @@
 				<label>手机号</label>
 				
 								<?php
-					if($userbaseinfo['sina_weibo_install']){
+					if($userbaseinfo['sina_weibo_install'] || $checkuser['isown']){
 				?>
 				<span class="normalText"><?=$userbaseinfo['mobile']?></span>
 				<?php
@@ -121,7 +121,7 @@
 			<div class="field-group">
 				<label>微 信</label>	
 												<?php
-					if($userbaseinfo['qq_install']){
+					if($userbaseinfo['qq_install'] || $checkuser['isown']){
 				?>
 				<span class="normalText"><?=$userbaseinfo['weixin']?></span>	
 				<?php

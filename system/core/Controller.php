@@ -142,7 +142,7 @@ class Base_Controller extends CI_Controller
                         $owninfo['role'] = 1;
                     }else{
                         $owninfo['isown'] = 0;
-                        $owninfo['role'] = 1;
+                        $owninfo['role'] = 2;
                     }
                    
                 }else{
@@ -163,6 +163,7 @@ class Base_Controller extends CI_Controller
             }
         }
 
+        
         return $owninfo;
         
     }
