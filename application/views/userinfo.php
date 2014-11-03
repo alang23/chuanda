@@ -41,53 +41,92 @@
 			</div>
 			<div class="field-group">
 				<label>昵 称</label>
-				<span class="normalText">王大花</span>
+				<span class="normalText"><?=$userbaseinfo['nick_name']?></span>
 			</div>
 			<div class="field-group">
 				<label>性 别</label>
-				<span class="normalText">女</span>	
+				<span class="normalText">
+				
+				<?php
+					if($userbaseinfo['sex'] == '0'){
+				?>
+				男
+				<?php
+					}elseif($userbaseinfo['sex'] == '1'){
+				?>
+					女
+				<?php
+					}
+				?>
+				</span>	
 			</div>	
 			<div class="field-group">
 				<label>年 龄</label>
-				<span class="normalText">23</span>	
+				<span class="normalText"><?=$userbaseinfo['age']?></span>	
 			</div>	
 			<div class="field-group">
 				<label>星 座</label>
-				<span class="normalText">双鱼</span>		
+				<span class="normalText"><?=$userbaseinfo['constellation']?></span>		
 			</div>
 			<div class="field-group">
 				<label>喜欢的品牌</label>
-				<span class="normalText">阿曼尼</span>			
+				<span class="normalText"><?=$userbaseinfo['like_brand']?></span>			
 			</div>	
 			<div class="field-group">
 				<label>喜欢的颜色</label>
-				<span class="normalText">紫色</span>			
+				<span class="normalText"><?=$userbaseinfo['like_color']?></span>			
 			</div>	
 			<div class="field-group">
 				<label>喜欢的名人</label>
-				<span class="normalText">张学友</span>				
+				<span class="normalText"><?=$userbaseinfo['like_star']?></span>				
 			</div>	
 			<div class="field-group">
 				<label>喜欢的风格</label>
-				<span class="normalText">小清新</span>			
+				<span class="normalText"><?=$userbaseinfo['like_style']?></span>			
 			</div>	
 			
 			<br /><br />
 			<div class="infoTitle"><span class="fl">联系信息</span></div>			
 			<div class="field-group">
 				<label>QQ</label>
-				<span class="normalText">56568923</span>			
+				<?php
+					if($userbaseinfo['qq_install']){
+				?>
+				<span class="normalText"><?=$userbaseinfo['qq']?></span>	
+				<?php
+					}
+				?>		
 			</div>	
 			<div class="field-group">
 				<label>新浪微博</label>
-				<span class="normalText"></span>			
+								<?php
+					if($userbaseinfo['weixin_install']){
+				?>
+				<span class="normalText"><?=$userbaseinfo['sina_weibo']?></span>
+				<?php
+					}
+				?>			
 			</div>	
 			<div class="field-group">
 				<label>手机号</label>
-				<span class="normalText">18603462354</span>			
+				
+								<?php
+					if($userbaseinfo['sina_weibo_install']){
+				?>
+				<span class="normalText"><?=$userbaseinfo['mobile']?></span>
+				<?php
+					}
+				?>			
 			</div>	
 			<div class="field-group">
-				<label>微 信</label>			
+				<label>微 信</label>	
+												<?php
+					if($userbaseinfo['qq_install']){
+				?>
+				<span class="normalText"><?=$userbaseinfo['weixin']?></span>	
+				<?php
+				}
+				?>		
 			</div>	
 			<div class="userOtherInfo">
 				<table class="fr">

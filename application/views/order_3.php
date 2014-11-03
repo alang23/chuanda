@@ -30,7 +30,7 @@
 
 		<!-- start subContent -->
 		<div class="order-subpage">
-			
+			<form class="form-common" id="form1" action="<?=base_url()?>index.php?c=myorder&m=step4" method="post">
             
             <!--daren nav start-->
             <div class="order-step-list">
@@ -74,7 +74,7 @@
 
             
             <div class="order-step-article order-need ">
-                <form class="form-common" id="form1" action="<?=base_url()?>index.php?c=myorder&m=step4" method="post">
+                
                 <div class="order-need-item">
                     <span>季节</span>
                     <div class="order-need-list">
@@ -181,8 +181,8 @@
                     <div class="clear"></div>
                 </div>
                 <input type="hidden" name="yin" id="yin" />
-				<input type="submit" value="submit" />
-                </form>
+				
+                
 
             </div>
 
@@ -192,9 +192,9 @@
 
             <div class="order-step-btn">
                 <a href="<?=base_url()?>index.php?c=myorder&m=step2&uid=<?=$uid?>" class="lg-btn lg-btn-default lg-btn-large">上一步</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="javascript:void(0);" onClick="dopost();" class="lg-btn lg-btn-primary lg-btn-large">下一步</a>
+                <input type="submit" class="lg-btn lg-btn-primary lg-btn-large" value="下一步" />
             </div>
-            
+            </form>
             
 
 

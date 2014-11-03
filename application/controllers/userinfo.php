@@ -19,7 +19,7 @@ class Userinfo extends Base_Controller
         $data['userid'] = $userid;
  
 		$data['userbaseinfo'] = $this->getUserinfoById($userid);
-	
+		
 		//
 		
 		if($checkuser['role'] == 1){
@@ -73,16 +73,66 @@ class Userinfo extends Base_Controller
 		$checkuser = $this->checkown();
         $data['checkuser'] = $checkuser;
 		//会员基本信息
+		if(!empty($_POST)){
 
-		$data['userbaseinfo'] = $this->getUserinfoById($userid);
-		
-		//
-		//
-		if($checkuser['role'] == 1){
-            $this->load->view('userinfo_edit',$data);
-        }elseif($checkuser['role'] == 2){
-             $this->load->view('daren/daren_info_edit',$data);
-        }
+			//t_user_base_information
+			$nick_name = $this->input->post('nick_name');
+			$sex = $this->input->post('sex');
+			$age = $this->input->post('age');
+			$this->load->model('userbaseinfo_mdl','userbaseinfo');
+			$database['nick_name'] = $nick_name;
+			$database['sex'] = $sex;
+			$database['age'] = $age;
+			$constellation = $this->input->post('constellation');
+
+			$config = array('base_info_id'=>$userid);
+			$this->userbaseinfo->update($config,$database);
+
+			//t_col_user_information
+			
+			$like_brand = $this->input->post('like_brand');
+			$like_color = $this->input->post('like_color');
+			$like_star = $this->input->post('like_star');
+			$like_style = $this->input->post('like_style');
+
+			//$coldata['constellation'] = $constellation;
+			$coldata['like_brand'] = $like_brand;
+			$coldata['like_color'] = $like_color;
+			$coldata['like_star'] = $like_star;
+			$coldata['like_style'] = $like_style;
+
+			$this->load->model('coluserinfo_mdl','coluserinfo');
+
+			$colconfig = array('user_id'=>$userid);
+			$this->coluserinfo->update($colconfig,$coldata);
+
+			//t_user_base_info
+			$qq = $this->input->post('qq');
+			$sina_weibo = $this->input->post('sina_weibo');
+			$mobile = $this->input->post('mobile');
+			$weixin = $this->input->post('weixin');
+			$this->load->model('member_mdl','member');
+			$memdata['qq'] = $qq;
+			$memdata['sina_weibo'] = $sina_weibo;
+			$memdata['mobile'] = $mobile;
+			$memdata['weixin'] = $weixin;
+			
+			$memconfig = array('id'=>$userid);
+			$this->member->update($memconfig,$memdata);
+
+
+		}else{
+
+			$data['userbaseinfo'] = $this->getUserinfoById($userid);
+
+			if($checkuser['role'] == 1){
+	            $this->load->view('userinfo_edit',$data);
+	        }elseif($checkuser['role'] == 2){
+	             $this->load->view('daren/daren_info_edit',$data);
+	        }
+		}
+
+
 
 	}
 

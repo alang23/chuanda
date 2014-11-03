@@ -27,8 +27,15 @@ class Login extends Base_Controller
             $mobile = $this->input->post('mobile');
             $pawd = $this->input->post('pawd');
             $captcha = $this->input->post('captcha');
+
+            //code session
+            $authcode = $this->session->userdata('auth_code');
+           
             if(empty($mobile) || empty($pawd) || empty($captcha)){
                 exit('info error');
+            }
+            if($authcode != $captcha){
+                exit('authcode error');
             }
 
             $this->load->model('member_mdl','member');
@@ -56,8 +63,19 @@ class Login extends Base_Controller
             redirect('c=home');
 
         }else{
+
+
+
             $this->load->view('login');
         }
+    }
+
+    public function getCode()
+    {
+            //验证码
+            $this->load->library('Authcode','code');
+            $code = new Authcode();
+            $code->show();
     }
 
     public function check_form()

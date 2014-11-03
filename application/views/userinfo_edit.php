@@ -34,26 +34,26 @@
 
 		<!-- start subContent -->
 		<div class="myinfo-subpage">
-			<form class="form-info" id="form1" action="#" method="post">
+			<form class="form-info" id="form1" action="<?=base_url()?>index.php?c=userinfo&m=edit" method="post">
     			<div class="infoTitle">
     				<span class="fl">基本信息</span>
     				<a href="<?=base_url()?>index.php?c=userinfo" class="lg-btn lg-btn-default-round">取消编辑</a>
     			</div>
     			<div class="field-group">
     				<label>* 昵 称</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['nick_name']?>" />
+    				<input type="text" class="text-input" name="nick_name" value="<?=$userbaseinfo['nick_name']?>" />
     			</div>
     			<div class="field-group">
     				<label>* 性 别</label>
-    				<input type="radio" name="gender" value="0" <?php if($userbaseinfo['sex'] == '0'){?> checked="checked" <?php } ?> /> 男  &nbsp;&nbsp; <input type="radio" name="gender" value="1" <?php if($userbaseinfo['sex'] == '1'){?> checked="checked" <?php } ?>/> 女
+    				<input type="radio" name="sex" value="0" <?php if($userbaseinfo['sex'] == '0'){?> checked="checked" <?php } ?> /> 男  &nbsp;&nbsp; <input type="radio" name="sex" value="1" <?php if($userbaseinfo['sex'] == '1'){?> checked="checked" <?php } ?>/> 女
     			</div>	
     			<div class="field-group">
     				<label>* 年 龄</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['age']?>" />
+    				<input type="text" class="text-input" name="age" value="<?=$userbaseinfo['age']?>" />
     			</div>	
     			<div class="field-group">
     				<label>星 座</label>
-    				<select name="" id="">
+    				<select name="constellation" id="constellation">
                         <option value="1">白羊座</option>
                         <option value="2">白羊座</option>
                         <option value="3">白羊座</option>
@@ -64,46 +64,47 @@
     			</div>
     			<div class="field-group">
     				<label>喜欢的品牌</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['nick_name']?>" />		
+    				<input type="text" class="text-input" name="like_brand" value="<?=$userbaseinfo['like_brand']?>" />		
     			</div>	
     			<div class="field-group">
     				<label>喜欢的颜色</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['nick_name']?>" />
+    				<input type="text" class="text-input" name="like_color" value="<?=$userbaseinfo['like_color']?>" />
     			</div>	
     			<div class="field-group">
     				<label>喜欢的名人</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['nick_name']?>" />
+    				<input type="text" class="text-input" name="like_star" value="<?=$userbaseinfo['like_star']?>" />
     			</div>	
     			<div class="field-group">
     				<label>喜欢的风格</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['nick_name']?>" />
+    				<input type="text" class="text-input" name="like_style" value="<?=$userbaseinfo['like_style']?>" />
     			</div>	
     			
     			<br /><br />
     			<div class="infoTitle"><span class="fl">联系信息</span></div>			
     			<div class="field-group">
     				<label>QQ</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['qq']?>" />
+    				<input type="text" class="text-input" name="qq" value="<?=$userbaseinfo['qq']?>" />
                     <span>&nbsp;&nbsp;设为 <a href="javascript:void(0);" class="link-btn">公开</a></span>
     			</div>	
     			<div class="field-group">
     				<label>新浪微博</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['sina_weibo']?>" />
+    				<input type="text" class="text-input" name="sina_weibo" value="<?=$userbaseinfo['sina_weibo']?>" />
                     <span>&nbsp;&nbsp;设为 <a href="javascript:void(0);" class="link-btn">公开</a></span>
     			</div>	
     			<div class="field-group">
     				<label>手机号</label>
-    				<input type="text" class="text-input" value="<?=$userbaseinfo['mobile']?>" />
+    				<input type="text" class="text-input" name="mobile" value="<?=$userbaseinfo['mobile']?>" />
                     <span>&nbsp;&nbsp;设为 <a href="javascript:void(0);" class="link-btn">公开</a></span>
     			</div>	
     			<div class="field-group">
     				<label>微 信</label>
-                    <input type="text" class="text-input" value="<?=$userbaseinfo['weixin']?>" />
+                    <input type="text" class="text-input"  name="weixin" value="<?=$userbaseinfo['weixin']?>" />
                     <span>&nbsp;&nbsp;设为 <a href="javascript:void(0);" class="link-btn">公开</a></span>	
     			</div>
                 <div class="field-group">
                     <label></label>
-                    <a href="#" class="lg-btn lg-btn-primary">保存</a>
+                   <!-- <a href="#" class="lg-btn lg-btn-primary">保存</a>-->
+					<input type="submit" value="保存" class="lg-btn lg-btn-primary"/>
                     
                 </div>  	
     			<div class="userOtherInfo">
