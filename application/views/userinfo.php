@@ -90,7 +90,7 @@
 			<div class="field-group">
 				<label>QQ</label>
 				<?php
-					if($userbaseinfo['qq_install']){
+					if($userbaseinfo['qq_install'] || $checkuser['isown']){
 				?>
 				<span class="normalText"><?=$userbaseinfo['qq']?></span>	
 				<?php

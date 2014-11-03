@@ -53,7 +53,11 @@ class Reg extends Base_Controller
 			$this->coluserinfo->add($coluserinfo);
 
 			//用户权限表
-			
+			$this->load->model('user_project_role_mdl','userprojectrole');
+			$roledata['user_id'] = $id;
+			$roledata['project_id'] = 1;
+			$roledata['user_role'] = 1;
+			$this->userprojectrole->add($roledata);
 
 		}else{
 			$this->load->view('reg');	

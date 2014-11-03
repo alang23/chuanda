@@ -7,6 +7,7 @@
 
     <!---->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>static/style/home.css?v=0.0.1">
+	
 </head>
 <body>
 <?php Widget::web_header();?>

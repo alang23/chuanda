@@ -56,8 +56,14 @@ class Login extends Base_Controller
             $logininfo['photo'] = $userinfo['photo'];
             //取得用户角色
             //$logininfo['role'] = 2;
-            
-
+            $this->load->model('user_project_role_mdl','role');
+            $rolewhere = array('user_id'=>$logininfo['id'],'project_id'=>1);
+            $roleinfo = $this->role->get_one_by_where($rolewhere);
+            //print_r($roleinfo);
+            //exit;
+            if($roleinfo){
+                $logininfo['role'] = $roleinfo['user_role'];
+            }
             
             //记录状态
             $this->session->set_userdata($this->config->item('sess_cookie_name'),$logininfo);
@@ -92,6 +98,6 @@ class Login extends Base_Controller
     {
         $this->session->unset_userdata($this->config->item('sess_cookie_name'));
 
-        redirect();
+        redirect('c=login');
     }
 }

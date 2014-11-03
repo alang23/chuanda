@@ -139,16 +139,16 @@ class Base_Controller extends CI_Controller
                     //url-id和登陆用户id相等
                     if($uid == $userid){      //访问的内容是自己的
                         $owninfo['isown'] = 1;
-                        $owninfo['role'] = 1;
+                        $owninfo['role'] = $this->memberinfo['role'];
                     }else{
                         $owninfo['isown'] = 0;
-                        $owninfo['role'] = 2;
+                        $owninfo['role'] = $this->getuserrole($userid);;
                     }
                    
                 }else{
                     //未登陆
                     $owninfo['isown'] = 0;
-                    $owninfo['role'] = 1;
+                    $owninfo['role'] = $this->getuserrole($userid);
                     
                 }
             }else{
@@ -156,7 +156,7 @@ class Base_Controller extends CI_Controller
                 if(!empty($this->memberinfo)){
                     $owninfo['userid'] = $this->memberinfo['id'];
                     $owninfo['isown'] = 1;
-                    $owninfo['role'] = 1;
+                    $owninfo['role'] =  $this->memberinfo['role'];
                 }else{
                     redirect('c=login');
                 }
@@ -166,6 +166,15 @@ class Base_Controller extends CI_Controller
         
         return $owninfo;
         
+    }
+
+    private function getuserrole($userid)
+    {
+        $this->load->model('user_project_role_mdl','user_role');
+        $where = array('user_id'=>$userid,'project_id'=>1);
+        $role = $this->user_role->get_one_by_where($where);
+        //print_r($role);
+        return $role['user_role'];
     }
 
 

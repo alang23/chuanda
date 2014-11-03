@@ -165,6 +165,18 @@ class Myorder extends Base_Controller
 
 	public function step4()
 	{
+        $this->checkLogin();
+        $userid = $this->memberinfo['id'];
+
+        $season = $this->input->post('season');
+        $occasion = $this->input->post('occasion');
+        $style = $this->input->post('style');
+        $weaher = $this->input->post('weaher');
+        $identity = $this->input->post('identity');
+        $demand = $this->input->post('demand');
+        $yin = $this->input->post('yin');
+
+
 		print_r($_POST);
 	}
 }
