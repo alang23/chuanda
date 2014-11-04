@@ -147,7 +147,7 @@
             <input id="file_upload" name="file_upload" type="file" multiple="true" />
             <ul id="uploaded_list"></ul>
             <div class="clear"></div>
-            
+            <input type="hidden" name="itemid" id="itemid" value="" />
         </div>
         
         <div class="pic-btn-wrap">

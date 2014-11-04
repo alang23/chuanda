@@ -30,7 +30,7 @@
 
 		<!-- start subContent -->
 		<div class="order-subpage">
-			<form class="form-common" id="form1" action="<?=base_url()?>index.php?c=myorder&m=step4" method="post">
+			<form class="form-common" id="form1" action="<?=base_url()?>index.php?c=myorder&m=step4&uid=<?=$uid?>" method="post">
             
             <!--daren nav start-->
             <div class="order-step-list">
@@ -181,6 +181,7 @@
                     <div class="clear"></div>
                 </div>
                 <input type="hidden" name="yin" id="yin" />
+				<input type="hidden" name="you" id="you" />
 				
                 
 
@@ -209,7 +210,7 @@
 		$(function(){
 			
 	        var jsHome = '<?=base_url()?>static/js/';
-			var account;
+			var account,you;
 	        $LAB.script(jsHome+'lg.js?v=0.0.1')
 	            .script(jsHome+'public/daren.js?v=0.0.1')
 				.script(jsHome+'vender/jquery.cookie.js?v=1.4.1')
@@ -217,7 +218,9 @@
 	                
                     daren.orderInit(jsHome);
 	                account = $.cookie('yin');
+					you = $.cookie('you');
 					$("#yin").val(account);
+					$("#you").val(you);
 					//alert(account);
 	            });
 

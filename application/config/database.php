@@ -52,6 +52,14 @@ $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
 $db['default']['password'] = '';
 $db['default']['database'] = 'chuanda_bak';
+
+/*
+$db['default']['hostname'] = '183.63.52.143';
+$db['default']['username'] = 'ly';
+$db['default']['password'] = '123456';
+$db['default']['database'] = 'dp_test_sanzu';
+*/
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

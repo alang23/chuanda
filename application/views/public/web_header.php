@@ -24,7 +24,7 @@
                 <ul>
                     <li><a href="<?=base_url()?>index.php?c=home">我的主页</a></li>
                     <li><a href="<?=base_url()?>index.php?c=createshop">达人开店</a></li>
-                    <li><a href="#">订单管理</a></li>
+                    <li><a href="<?=base_url()?>index.php?c=orders">订单管理</a></li>
                     <li><a href="<?=base_url()?>index.php?c=message">消息中心</a></li>
                     <li>
                         <div class="drop-box-nav" id="drop-box-nav">

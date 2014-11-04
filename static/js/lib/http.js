@@ -107,16 +107,16 @@ function updatePwd(old_pwd,pwd,cpwd){
  * 
  */
 function addChestPic(pics){
-	
+	//return {"code":0,"msg":"ok"};
 	var R;
 	$.ajax({
 		url: hostname+"index.php?c=underwear&m=add_underwear&rand="+Math.random(),
-		//dataType:"json",
+		dataType:"json",
 		data: {arr:pics},
 		type:"POST",
 		async:false,
 		success:function(r){
-		R = r;
+			R = r;
 			
 		}
 	})
@@ -145,7 +145,7 @@ function getEquip(id){
 		})
 		
 		
-	return {"code":0,"data":{"pic":"http:\/\/chuanda.lg\/uploads\/member\/clothespress\/"+jsonData['imageUrl'],"d_type":jsonData['type'],"d_style":2,"d_class":3,"season":[1,3],"star":3,"prize_min":120,"prize_max":200},"msg":"ok"};
+	return {"code":0,"data":{"pic":hostname+"uploads\/member\/clothespress\/"+jsonData['imageUrl'],"d_type":jsonData['type'],"d_style":2,"d_class":3,"season":[1,3],"star":3,"prize_min":120,"prize_max":200},"msg":"ok"};
 
 }
 
@@ -181,6 +181,7 @@ function updateEquip(id,data){
 			type:"POST",
 			async:false,
 			success:function(r){
+				
 				if(r == 1){
 					msg = '修改成功';
 				}

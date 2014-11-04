@@ -19,7 +19,13 @@ class Follow extends Base_Controller
 
         $data['userid'] = $userid;
 
-               //模板选择
+        $where = array('where'=>array('urole.user_role'=>2));
+        $this->load->model('follow_mdl','follow');
+        $list = $this->follow->getList($where);
+        
+        $data['list'] =$list;
+       // print_r($list);
+        //模板选择
        if($checkuser['role'] == 1){
             $this->load->view('follow',$data);
        }elseif($checkuser['role'] == 2){

@@ -30,7 +30,7 @@ class Home extends Base_Controller
         $limit = 6;
         $offset = ($page - 1) * $limit;
         $pagination = '';
-        $countwhere = array('applyer'=>$userid);
+        $countwhere = array('applyer'=>$userid,'status'=>7);
         $count = $this->daily->get_count($countwhere);
         $data['count'] = $count;
 

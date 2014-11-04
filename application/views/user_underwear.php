@@ -8,7 +8,7 @@
     <!---->
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>static/style/home.css?v=0.0.1">
     <link rel="stylesheet" href="<?=base_url()?>static/js/vender/uploadify/uploadify.css">
-    <script>var hostname = 'http://chuanda.lg/';</script>
+    <script>var hostname = '<?=base_url()?>';</script>
 </head>
 <body>
 <?php Widget::web_header();?>
@@ -22,8 +22,8 @@
 		<div class="lg-breadcrumb">
 			<dl>
 				<dt>您当前位置：</dt>
-				<dd><a href="index.html">首页</a> > </dd>
-				<dd><a href="home.html">我的主页</a> > </dd>
+				<dd><a href="<?=base_url()?>">首页</a> > </dd>
+				<dd><a href="<?=base_url()?>index.php?c=home">我的主页</a> > </dd>
                 <dd>我的衣柜</dd>
 			</dl>
 			<div class="clear"></div>
@@ -144,7 +144,7 @@
             <input id="file_upload" name="file_upload" type="file" multiple="true" />
             <ul id="uploaded_list"></ul>
             <div class="clear"></div>
-            
+            <input type="hidden" name="itemid" id="itemid" value="" />
         </div>
         
         <div class="pic-btn-wrap">

@@ -105,7 +105,7 @@
 									<?php
 										if($checkuser['isown']){
 									?>
-									| <a href="javascript:void(0);" class="aDiaryDelete">删除</a>
+									| <a href="<?=base_url()?>index.php?c=daily&m=del&id=<?=$v['orderId']?>" class="aDiaryDelete">删除</a>
 									<?php
 									}
 									?>

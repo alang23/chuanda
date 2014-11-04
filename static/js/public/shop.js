@@ -14,7 +14,7 @@ shop.daren_reg = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '2048KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://chuanda.lg/index.php?c=createshop&m=uploadfile&type=idcard',
+                'uploader'      : hostname+'index.php?c=createshop&m=uploadfile&type=idcard',
                 'onUploadSuccess' :function(file, data, response){
 
 					var returndata = eval('(' + data + ')');
@@ -30,7 +30,7 @@ shop.daren_reg = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '2048KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://chuanda.lg/index.php?c=createshop&m=uploadfile&type=photo',
+                'uploader'      : hostname+'index.php?c=createshop&m=uploadfile&type=photo',
                 'onUploadSuccess' :function(file, data, response){
 					var returndata = eval('(' + data + ')');
                     $("#bust-show").html('<img src="'+returndata.filedir+'" width="120" height="90" />');

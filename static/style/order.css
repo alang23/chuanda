@@ -132,3 +132,65 @@
 
 
 
+
+.dialog-refuse{width:680px;height: 530px;background-color: white;display: none;padding:10px;}
+.dialog-refuse .refuse-pic{width:100%;height: 240px;text-align: center;line-height: 240px;}
+.refuse-title{width:650px;height: 40px;line-height: 40px;padding-left: 30px;background-color: #f7f8fa;}
+.refuse-form li{margin:10px 0;}
+.refuse-btn{width:100%;line-height: 40px;text-align: center;}
+
+
+
+.order-chuanda-subpage{width: 1100px;height: auto;padding:60px 50px 80px 50px;background-color: white;}
+.user-order-header{width:1100px;height: 200px;border-bottom: 1px solid #ddd;}
+.order-chuanda-subpage .user-info-avatar{float: left;}
+
+.user-order-info{width:900px;float: right;line-height: 28px;}
+.user-order-info {font-size: 16px;}
+
+
+
+.user-order-need li{width:150px;line-height: 30px;float: left;margin-right:10px;}
+
+.user-order-article{width:1100px;height:auto;margin:0 auto;padding-top:10px;}
+
+.test-dress{width:330px;height: 586px;float: left;margin-right: 18px;display: inline-block; }
+.test-grid{width:264px;height:auto;float: left;margin-right:10px;display: inline-block;}
+.test-chest-wrap{width:478px;height: auto;float: right;}
+.test-grid li{width:80px;height: 108px;float: left;margin-right: 8px;margin-bottom:8px;text-align: center;line-height: 108px;background-color: #dddddd;display: inline-block;}
+.test-grid li img{width:80px;text-align: center;}
+
+.test-chest-nav{width:114px;border-top:1px solid #d7d7d7;float: left;}
+.test-chest-nav li{width:114px;height: 86px;border-bottom: 1px solid #d7d7d7;text-align: center;}
+.test-chest-nav li a{display: block;width: 90px;height: 66px;padding-left:20px;padding-top:20px;font-size: 16px;border-left:4px solid #f8f8f8;}
+.test-chest-nav li a:hover,.test-chest-nav li a.active{text-decoration: none;border-left:4px solid #882e84;width:90px;padding-left:20px;}
+
+.test-chest-list{width:354px;height: 610px;float: right;padding-left:10px; overflow: auto;}
+.test-chest-list li{width:80px;height: 108px;float: left;margin-right:8px;margin-bottom: 8px;display: inline-block;background-color: #dddddd;line-height: 108px;}
+.test-chest-list li a{display: block;width: 100%;height: 100%;}
+.test-chest-list li img{width:80px;text-align: center;}
+.reply-message{padding-top:10px;}
+.reply-message h5{margin:10px 0;}
+.reply-message textarea{width:250px;height: 148px;overflow: auto;padding:5px;}
+
+
+.order-chuanda-subpage .panel-body{padding-top:50px;}
+.upload-show-grid{width:640px;height: 440px;float: left;}
+
+.upload-show-section{width:400px;height: auto;float: right;font-size: 14px;}
+.upload-show-section p{line-height: 30px;}
+.upload-show-section .p1{font-size: 18px;}
+.upload-show-section .p2{margin-top: 15px;}
+.upload-show-section .p2 span{margin-right: 30px;}
+.upload-show-section .p4{margin-top: 10px;}
+.upload-show-section .p5{margin-top: 30px;text-align: right;}
+#upload-show-btn{position: absolute;top:200px;left:100px;}
+
+
+
+
+
+
+
+
+

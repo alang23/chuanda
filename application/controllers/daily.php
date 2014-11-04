@@ -63,6 +63,7 @@ class Daily extends Base_Controller
 
         $list = $this->daily->getList($where);
         $data['list'] = $list;
+
         
         if($checkuser['role'] == 1){
             $this->load->view('home',$data);
@@ -112,7 +113,10 @@ class Daily extends Base_Controller
             $adddata['applyer'] = $userid;
  			$adddata['createDate'] = date("Y-m-d H:i:s");
             $adddata['picinfo'] = $picname.','.$picstr ;
- 			echo $this->daily->add($adddata);
+            $adddata['status'] = 7;
+            $adddata['approver'] = $userid;
+ 			$this->daily->add($adddata);
+            redirect('c=home');
 
 
         }else{
@@ -180,5 +184,20 @@ class Daily extends Base_Controller
             }
 
         }
+    }
+
+    public function del()
+    {
+        $id = $this->input->get('id');
+        $this->checkLogin();
+        $userid = $this->memberinfo['id'];
+
+       $this->load->model('daily_mdl','daily');
+
+        $where = array('orderId'=>$id,'applyer'=>$userid);
+       
+        $this->daily->del($where);
+        redirect('c=home');
+
     }
 }

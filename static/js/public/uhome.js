@@ -193,9 +193,9 @@ p.home_my_chest = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '204800KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://localhost/uploadify.php',
+                'uploader'      : hostname+'index.php?c=underwear&m=add',
                 'onUploadSuccess' :function(file, data, response){
-                    $("#uploaded_list").find('#upid_'+upid).html('<img src="'+data+'" width="158px" />');
+                    $("#uploaded_list").find('#upid_'+upid).html('<img src="'+hostname+'uploads/member/clothespress/'+data+'" width="158px" />');
                     upArr.push(data);
                     upid+=1;
                 },
@@ -224,6 +224,12 @@ p.home_my_chest = function(jsHome){
                 _this.click(function(){
                     $("#chest-detail-box").hide();
                     $("#chest-detail-loading").show();
+					
+					var _id = $(this).attr('data-id');
+                    var _data = getEquip(_id);
+                    var _wrap = $('#form1');
+					
+					$("#itemid").val(_id);
 
                     $.layer({
                         type: 1,
@@ -237,14 +243,14 @@ p.home_my_chest = function(jsHome){
                         page: {dom : '#chest-detail-wrap'}
                     });
 
-                    var _id = $(this).attr('data-id');
-                    var _data = getEquip(_id);
-                    var _wrap = $('#form1');
+                   
+					
+					
 
                     if(_data && _data.code==0){
                         $("#chest-detail-box").show();
                         $("#chest-detail-loading").hide();
-
+						
                         $("#pic-show-box").html('<img src="'+_data.data.pic+'" />');
                         $('#d-type').val(_data.data.d_type);
                         $('#d-style').val(_data.data.d_style);
@@ -272,7 +278,10 @@ p.home_my_chest = function(jsHome){
             $("#chest-detail-submit").click(function(){
                
                 $("#chest-detail-submit-tip").html('正在保存...');
-                var _id = $(this).attr('data-id');
+                //var _id = $(this).attr('data-id');
+				var _id = $("#itemid").val();
+				//alert(_id);
+				
                 var obj = {}
                 obj.d_type = $('#d-type').val();
                 obj.d_style = $('#d-style').val();
@@ -372,10 +381,11 @@ p.addDiary = function(jsHome){
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '204800KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://localhost/uploadify.php',
+                'uploader'      : hostname+'index.php?c=daily&m=add_pic',
                 'onUploadSuccess' :function(file, data, response){
+					var picdir = hostname+'uploads/member/daily/'+data;
                    $("#upload-show-btn").hide();
-                   $("#upload-show-pic").html('<img src="'+data+'" />');
+                   $("#upload-show-pic").html('<img src="'+picdir+'" />');
                    $("#upload_show_val").val(data);
                 },
                 'onUploadProgress' : function(file, bytesUploaded, bytesTotal, totalBytesUploaded, totalBytesTotal) {

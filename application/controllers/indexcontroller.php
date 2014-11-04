@@ -9,7 +9,8 @@ class Indexcontroller extends Base_Controller{
 
 
 	public function index(){
-		$data['nav'] = 'index';
-		$this->load->view('index',$data); 
+		//$data['nav'] = 'index';
+		//$this->load->view('index',$data);
+		redirect('c=login'); 
 	}
 }

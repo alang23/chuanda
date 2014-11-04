@@ -65,7 +65,7 @@
             <div class="add-diary-txt">
                 <h5>写穿搭日记</h5>
                 <textarea name="content" id="content"></textarea>
-                <p><a href="javascript:void(0);"  class="lg-btn lg-btn-primary">发 布</a><input name="" type="submit" value="send"></p>
+                <p><!--<a href="javascript:void(0);"  class="lg-btn lg-btn-primary">发 布</a>--><input name="" type="submit" class="lg-btn lg-btn-primary"></p>
             </div>
 			</form>
     	</div>

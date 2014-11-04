@@ -70,8 +70,8 @@
                         <div class="form-field">
                             <input type="text" name="captcha" id="captcha" class="form-text form-text-captcha" placeholder="请输入验证码">
                             <span class="captcha-tip">
-                                <a href="#">
-                                    <img src="<?=base_url()?>index.php?c=login&m=getCode" alt="" width="120px" height="40px" id="authcode">
+                                <a href="javascript:void(0);" onClick="changeCode();">
+                                    <img src="<?=base_url()?>index.php?c=login&m=verify_image" alt="" id="verify_code" width="120px" height="40px" id="authcode">
                                 </a>
                             </span>
                             <span class="required-dot">*</span>
@@ -111,12 +111,13 @@
             .wait(function(){
                 $('input, textarea').placeholder();
                 var r = new LoginVerify('form1');
-
             });
 
-            //$("#authcode").attr('src','http://');
-
+          
     });
+	    
+  
+    
     </script>
 
 

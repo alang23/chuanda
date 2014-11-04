@@ -76,10 +76,13 @@ class Member_mdl extends  CI_Model
         if(!empty($where)){
             $this->db->where($where);
         }
+        
         $this->db->select('m.id as userid,m.*,b.*,cui.*');
         $this->db->from('t_user_base_info as m');
         $this->db->join('t_col_user_information as cui','cui.user_id = m.id','left');
         $this->db->join('t_user_base_information as b', 'm.id = b.base_info_id','left');
+        
+
 
         $news = $this->db->get()->row_array();
         return $news;

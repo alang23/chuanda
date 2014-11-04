@@ -21,8 +21,8 @@
 		<div class="lg-breadcrumb">
 			<dl>
 				<dt>您当前位置：</dt>
-				<dd><a href="index.html">首页</a> > </dd>
-				<dd><a href="home.html">我的主页</a> > </dd>
+				<dd><a href="<?=base_url()?>">首页</a> > </dd>
+				<dd><a href="<?=base_url()?>index.php?c=home">我的主页</a> > </dd>
 				<dd>账号设置</dd>
 			</dl>
 			<div class="clear"></div>

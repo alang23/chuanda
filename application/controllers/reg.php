@@ -58,6 +58,7 @@ class Reg extends Base_Controller
 			$roledata['project_id'] = 1;
 			$roledata['user_role'] = 1;
 			$this->userprojectrole->add($roledata);
+			redirect('c=login');
 
 		}else{
 			$this->load->view('reg');	

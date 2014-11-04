@@ -29,6 +29,7 @@ class Authcode {
 	function __construct() {
 		$this->CI = & get_instance();
 		$this->fontPath = realpath(dirname(__FILE__) . '/fonts/');	//字体文件
+
 		//$this->arrChr 	= array_merge(range(1, 9) , range('A', 'Z'), range('a', 'z'));
 		//$this->arrChr = range('A', 'Z');
 		//纯字母验证码
@@ -83,6 +84,7 @@ class Authcode {
 			$textColor = imageColorAllocate($this->image, rand(0, 100), rand(0, 100), rand(0, 100));
 			//$font = $this->fontPath . '/' . rand(1, 5) . ".ttf";
             $font = $this->fontPath . '/texb.ttf';
+            echo $font;
 			$randsize = rand($size - $size / 10, $size + $size / 10);
 			$location = $left + ($i * $size + $size / 10);
 			@imagettftext($this->image, $randsize, rand(- 18, 18), $location, rand($size - $size / 10, $size + $size / 10) + 2, $textColor, $font, $randText);

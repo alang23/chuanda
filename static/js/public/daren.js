@@ -89,8 +89,9 @@ var daren = {
                 'queueSizeLimit' : 13,
                 'fileSizeLimit' : '204800KB',
                 'swf'           : jsHome+'vender/uploadify/uploadify.swf',
-                'uploader'      : 'http://localhost/uploadify.php',
+                'uploader'      : hostname+'index.php?c=underwear&m=add',
                 'onUploadSuccess' :function(file, data, response){
+					
                     $("#uploaded_list").find('#upid_'+upid).html('<img src="'+data+'" width="158px" />');
                     upArr.push(data);
                     upid+=1;
@@ -169,6 +170,7 @@ var daren = {
                
                 $("#chest-detail-submit-tip").html('正在保存...');
                 var _id = $(this).attr('data-id');
+				alert(_id);
                 var obj = {}
                 obj.d_type = $('#d-type').val();
                 obj.d_style = $('#d-style').val();

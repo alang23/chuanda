@@ -111,7 +111,8 @@ class Underwear extends Base_Controller
             }
 
         }else{
-        	$this->load->view('yikui');
+        	//$this->load->view('yikui');
+            echo 'asdf';
         }
     }
 
@@ -135,7 +136,8 @@ class Underwear extends Base_Controller
             $this->underwear->add($appdata);
        }
 
-       echo '1'; 
+       $json = array('code'=>0,'msg'=>'ok'); 
+       echo json_encode($json);
 
     }
 

@@ -60,18 +60,20 @@
 				<!--article start-->
 				<div class="myhome-follow-article" id="myhome-follow-article">
 					<ul>
-
+						<?php
+							foreach($list as $k => $v){
+						?>
 						<li>
 							<div class="follow-avatar">
-								<a href="#"><img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-middle"></a>
+								<a href="#"><img src="<?=base_url()?><?=$v['photo']?>" alt="" class="avatar avatar-middle"></a>
 								<div class="follow-detail">
 									<span class="detail-top-caret"></span>
 									<div class="detail-left">
-										<img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-default">
-										<p><a href="#" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
+										<img src="<?=base_url()?><?=$v['photo']?>" alt="" class="avatar avatar-default">
+										<p><a href="<?=base_url()?>index.php?c=myorder&uid=<?=$v['userid']?>" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
 									</div>
 									<div class="detail-right">
-										<h5>小明</h5>
+										<h5><?=$v['username']?></h5>
 										<p>穿搭价格：2万/次</p>
 										<p><span>粉丝数：125万</span><span>回复时间：6小时</span></p>
 										<p><span>购买量：38万</span><span>穿搭时间：2小时</span></p>
@@ -82,7 +84,7 @@
 								</div>
 							</div>
 							<div class="follow-name">
-								<a href="#">小明</a> <span class="icon icon-crown-small"></span>
+								<a href="#"><?=$v['username']?></a> <span class="icon icon-crown-small"></span>
 							</div>
 							<div class="follow-num">
 								<a href="#">粉丝数 <em>123456</em></a> <a href="#">购买量 <em>654321</em></a>
@@ -92,162 +94,11 @@
 							</div>
 							
 						</li>
-						<li>
-							<div class="follow-avatar">
-								<a href="#"><img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-middle"></a>
-								<div class="follow-detail">
-									<span class="detail-top-caret"></span>
-									<div class="detail-left">
-										<img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-default">
-										<p><a href="#" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
-									</div>
-									<div class="detail-right">
-										<h5>小明</h5>
-										<p>穿搭价格：2万/次</p>
-										<p><span>粉丝数：125万</span><span>回复时间：6小时</span></p>
-										<p><span>购买量：38万</span><span>穿搭时间：2小时</span></p>
-										<p>擅长风格：甜美、可爱</p>
-										<p>小喇叭：萌妹子看过来</p>
-										<p>闪亮过往：2014毕业于北大设计学院</p>
-									</div>
-								</div>
-							</div>
-							<div class="follow-name">
-								<a href="#">小明</a> <span class="icon icon-crown-small"></span>
-							</div>
-							<div class="follow-num">
-								<a href="#">粉丝数 <em>123456</em></a> <a href="#">购买量 <em>654321</em></a>
-							</div>
-							<div class="follow-btn">
-								<a href="javascript:void(0);" data-id="2" data-isfollow="yes" class="lg-btn lg-btn-wire lg-btn-small">取消关注</a>
-							</div>
-							
-						</li>
-						<li>
-							<div class="follow-avatar">
-								<a href="#"><img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-middle"></a>
-								<div class="follow-detail">
-									<span class="detail-top-caret"></span>
-									<div class="detail-left">
-										<img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-default">
-										<p><a href="#" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
-									</div>
-									<div class="detail-right">
-										<h5>小明</h5>
-										<p>穿搭价格：2万/次</p>
-										<p><span>粉丝数：125万</span><span>回复时间：6小时</span></p>
-										<p><span>购买量：38万</span><span>穿搭时间：2小时</span></p>
-										<p>擅长风格：甜美、可爱</p>
-										<p>小喇叭：萌妹子看过来</p>
-										<p>闪亮过往：2014毕业于北大设计学院</p>
-									</div>
-								</div>					
-		
-							</div>
-							<div class="follow-name">
-								<a href="#">小明</a> <span class="icon icon-crown-small"></span>
-							</div>
-							<div class="follow-num">
-								<a href="#">粉丝数 <em>123456</em></a> <a href="#">购买量 <em>654321</em></a>
-							</div>
-							<div class="follow-btn">
-								<a href="javascript:void(0);" data-id="3" data-isfollow="yes" class="lg-btn lg-btn-wire lg-btn-small">取消关注</a>
-							</div>
-							
-						</li>
-						<li>
-							<div class="follow-avatar">
-								<a href="#"><img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-middle"></a>
-								<div class="follow-detail">
-									<span class="detail-top-caret"></span>
-									<div class="detail-left">
-										<img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-default">
-										<p><a href="#" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
-									</div>
-									<div class="detail-right">
-										<h5>小明</h5>
-										<p>穿搭价格：2万/次</p>
-										<p><span>粉丝数：125万</span><span>回复时间：6小时</span></p>
-										<p><span>购买量：38万</span><span>穿搭时间：2小时</span></p>
-										<p>擅长风格：甜美、可爱</p>
-										<p>小喇叭：萌妹子看过来</p>
-										<p>闪亮过往：2014毕业于北大设计学院</p>
-									</div>
-								</div>
-							</div>
-							<div class="follow-name">
-								<a href="#">小明</a> <span class="icon icon-crown-small"></span>
-							</div>
-							<div class="follow-num">
-								<a href="#">粉丝数 <em>123456</em></a> <a href="#">购买量 <em>654321</em></a>
-							</div>
-							<div class="follow-btn">
-								<a href="javascript:void(0);" data-id="4" data-isfollow="yes" class="lg-btn lg-btn-wire lg-btn-small">取消关注</a>
-							</div>
-							
-						</li>
-						<li>
-							<div class="follow-avatar">
-								<a href="#"><img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-middle"></a>
-								<div class="follow-detail">
-									<span class="detail-top-caret"></span>
-									<div class="detail-left">
-										<img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-default">
-										<p><a href="#" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
-									</div>
-									<div class="detail-right">
-										<h5>小明</h5>
-										<p>穿搭价格：2万/次</p>
-										<p><span>粉丝数：125万</span><span>回复时间：6小时</span></p>
-										<p><span>购买量：38万</span><span>穿搭时间：2小时</span></p>
-										<p>擅长风格：甜美、可爱</p>
-										<p>小喇叭：萌妹子看过来</p>
-										<p>闪亮过往：2014毕业于北大设计学院</p>
-									</div>
-								</div>
-							</div>
-							<div class="follow-name">
-								<a href="#">小明</a> <span class="icon icon-crown-small"></span>
-							</div>
-							<div class="follow-num">
-								<a href="#">粉丝数 <em>123456</em></a> <a href="#">购买量 <em>654321</em></a>
-							</div>
-							<div class="follow-btn">
-								<a href="javascript:void(0);" data-id="5" data-isfollow="yes" class="lg-btn lg-btn-wire lg-btn-small">取消关注</a>
-							</div>
-							
-						</li>
-						<li>
-							<div class="follow-avatar">
-								<a href="#"><img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-middle"></a>
-								<div class="follow-detail">
-									<span class="detail-top-caret"></span>
-									<div class="detail-left">
-										<img src="<?=base_url()?>static/images/head/star/4.jpg" alt="" class="avatar avatar-default">
-										<p><a href="#" class="lg-btn lg-btn-primary-round lg-btn-small">请TA穿搭</a></p>
-									</div>
-									<div class="detail-right">
-										<h5>小明</h5>
-										<p>穿搭价格：2万/次</p>
-										<p><span>粉丝数：125万</span><span>回复时间：6小时</span></p>
-										<p><span>购买量：38万</span><span>穿搭时间：2小时</span></p>
-										<p>擅长风格：甜美、可爱</p>
-										<p>小喇叭：萌妹子看过来</p>
-										<p>闪亮过往：2014毕业于北大设计学院</p>
-									</div>
-								</div>
-							</div>
-							<div class="follow-name">
-								<a href="#">小明</a> <span class="icon icon-crown-small"></span>
-							</div>
-							<div class="follow-num">
-								<a href="#">粉丝数 <em>123456</em></a> <a href="#">购买量 <em>654321</em></a>
-							</div>
-							<div class="follow-btn">
-								<a href="javascript:void(0);" data-id="6" data-isfollow="yes" class="lg-btn lg-btn-wire lg-btn-small">取消关注</a>
-							</div>
-							
-						</li>
+						<?php
+							}
+						?>
+						
+					
 						
 						
 					</ul>
@@ -257,7 +108,7 @@
 
 				<div class="myhome-diary-pagebar">
 					<ul class="pagination">
-					  <li><a href="#">上一页</a></li>
+<!--					  <li><a href="#">上一页</a></li>
 					  <li><span  class="page-active">1</span></li>
 					  <li><a href="#">2</a></li>
 					  <li><a href="#">3</a></li>
@@ -267,7 +118,7 @@
 					  <li><a href="#">7</a></li>
 					  <li><a href="#">8</a></li>
 					  <li><span>...</span></li>
-					  <li><a href="#">下一页</a></li>
+					  <li><a href="#">下一页</a></li>-->
 					</ul>
 				</div>
 

@@ -167,6 +167,8 @@ class Myorder extends Base_Controller
 	{
         $this->checkLogin();
         $userid = $this->memberinfo['id'];
+        $uid = $this->input->get('uid');
+        $data['uid'] = $uid; 
 
         $season = $this->input->post('season');
         $occasion = $this->input->post('occasion');
@@ -175,8 +177,87 @@ class Myorder extends Base_Controller
         $identity = $this->input->post('identity');
         $demand = $this->input->post('demand');
         $yin = $this->input->post('yin');
+        $you = $this->input->post('you');
+        $transactionAmount = $this->input->post('transactionAmount');
 
+        $data['season'] = $season;
+        $data['occasion'] = $occasion;
+        $data['style'] = $style;
+        $data['weaher'] = $weaher;
+        $data['identity'] = $identity;
+        $data['demand'] = $demand;
+        $data['transactionAmount'] = $transactionAmount;
+        //另外一个表
+        $data['yin'] = $yin;
+        $data['you'] = $you;
 
-		print_r($_POST);
+        $this->load->model('member_mdl','member');
+        $where = array('m.id'=>$uid);
+        $userinfo = $this->member->get_one_by_where($where);
+        $data['userinfo'] = $userinfo;
+
+        //隐藏衣服
+        $query = $this->db->query("select imageUrl,apparelId from t_col_apparel where userId = $userid and apparelId in($yin)");
+        $yinarr = $query->result_array();
+        $data['yinarr'] = $yinarr;
+
+        //优
+        if(!empty($you)){
+            $query = $this->db->query("select imageUrl,apparelId from t_col_apparel where userId = $userid and apparelId = $you");
+            $youarr = $query->result_array();
+            $data['you'] = $youarr[0];
+            //print_r($youarr);
+        }
+            //订单入库
+        $this->load->view('order_4',$data);
+		
 	}
+
+    public function save()
+    {
+
+        $this->checkLogin();
+        $userid = $this->memberinfo['id'];
+        $uid = $this->input->get('uid');
+        $data['applyer'] = $uid; 
+
+        $season = $this->input->post('season');
+        $occasion = $this->input->post('occasion');
+        $style = $this->input->post('style');
+        $weaher = $this->input->post('weaher');
+        $identity = $this->input->post('identity');
+        $demand = $this->input->post('demand');
+        $yin = $this->input->post('yin');
+        $you = $this->input->post('you');
+        $transactionAmount = $this->input->post('transactionAmount');
+
+        $data['season'] = $season;
+        $data['occasion'] = $occasion;
+        $data['style'] = $style;
+        $data['weaher'] = $weaher;
+        $data['identity'] = $identity;
+        $data['message'] = $demand;
+        $data['transactionAmount'] = $transactionAmount;
+        $data['orderId'] = time().$userid;
+        $data['createDate'] = date("Y-m-d :H:i:s");
+        $data['applyer'] = $userid;
+        $data['status'] = 0;
+        $data['approver'] = $uid;
+        //另外一个表
+        $dataopen['yin'] = $yin;
+        $dataopen['you'] = $you;
+
+
+
+        $this->load->model('daily_mdl','daily');
+        $this->daily->add($data);
+
+        redirect('c=myorder&m=step5');
+    }
+
+    public function step5()
+    {
+        $this->load->view('order_5');
+    }
+
 }

@@ -34,9 +34,11 @@ class Login extends Base_Controller
             if(empty($mobile) || empty($pawd) || empty($captcha)){
                 exit('info error');
             }
+            
             if($authcode != $captcha){
                 exit('authcode error');
             }
+            
 
             $this->load->model('member_mdl','member');
             $config = array('mobile'=>$mobile);
@@ -93,6 +95,16 @@ class Login extends Base_Controller
        
         return $this->form_validation->run();
     }
+
+    //验证码
+    public function verify_image() {  
+  
+        $conf['name'] = $this->config->item('sess_cookie_name'); //作为配置参数  
+        $this->load->library('Captcha_code', $conf);  
+        $this->captcha_code->show();  
+        $yzm_session = $this->session->userdata('auth_code');  
+        echo $yzm_session;  
+    } 
 
     public function loginout()
     {
